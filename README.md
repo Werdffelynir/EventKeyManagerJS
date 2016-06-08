@@ -48,3 +48,34 @@ EventKeyManager.isDisable(id)
 EventKeyManager.foreachEvent(callback)      
 (public) (void) Метод, переберает все событийные объекты, сходно функции Array.map
 ```
+
+## Примеры
+```
+EventKeyManager.init();
+
+EventKeyManager.add('esc', 27, function(event){
+    console.log('Front \'esc\' >>> ', event);
+});
+EventKeyManager.add('left', 37, function(event){
+    console.log('Front \'left\' >>> ', event);
+});
+EventKeyManager.add('right', 39, function(event){
+    console.log('Front \'right\' >>> ', event);
+});
+EventKeyManager.add('up', 38, function(event){
+    console.log('Front \'up\' >>> ', event);
+});
+EventKeyManager.add('down', 40, function(event){
+    console.log('Front \'down\' >>> ', event);
+});
+
+EventKeyManager.disable('up');
+EventKeyManager.disable('down');
+```
+
+```
+    EventKeyManager.listen(function(event){
+        var about = "key:" + event.key + " keyCode:" + event.keyCode;
+        console.log('Front \'listen\' >>> ', about, event);
+    });
+```
