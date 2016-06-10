@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>Demo of EventKeyManager</title>
     
     <script src="event.key.manager.js" type="application/javascript"></script>
     <script src="http://dom.loc/ns.app/src/applibrary/util.js" type="application/javascript"></script>

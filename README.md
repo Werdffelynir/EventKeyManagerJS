@@ -19,7 +19,7 @@ EventKeyManager.listen(callback)
 (public) (void) Метод, выполняет переданую функцию в параметре каждый раз при возникновении события "onkeyup" 
 
 EventKeyManager.add(id, keyCode, callback)               
-(public) (void) Метод, добавляет событие с уникальным индификатором
+(public) (void) Метод, добавляет событие с индификатором. Индификаторы могут собератся в стаки. 
 
 EventKeyManager.getById(id)           
 (public) (object|null) Метод, вернет ссылку на событийный объект по id
@@ -74,8 +74,8 @@ EventKeyManager.disable('down');
 ```
 
 ```
-    EventKeyManager.listen(function(event){
-        var about = "key:" + event.key + " keyCode:" + event.keyCode;
-        console.log('Front \'listen\' >>> ', about, event);
-    });
+EventKeyManager.listen(function(event){
+    var about = "key:" + event.key + " keyCode:" + event.keyCode;
+    console.log('Front \'listen\' >>> ', about, event);
+});
 ```
