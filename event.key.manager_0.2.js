@@ -16,7 +16,7 @@
             __construct.addListener(this.eventType)
         };
 
-    /////////////////////////// Static methods  ///////////////////////////
+    ///////////////////////////  Static methods  ///////////////////////////
 
     /**
      *
@@ -232,8 +232,16 @@
     __construct.prototype.codeToChart = function(code){
         return String.fromCharCode(code);
     };
-    __construct.prototype.getById = function (id) { };
-    __construct.prototype.getAllByKeyCode = function (id) { };
+    __construct.prototype.getById = function (id) {
+        return __construct.getEvent(this.eventType, id);
+    };
+    __construct.prototype.getAllByKeyCode = function (keyCode) {
+        var stack =__construct.getEvent(this.eventType);
+        for (i = 0; i < stack.length; i++){
+            if ( stack[i]['keyCode'] == keyCode ) 
+                return stack[i];
+        }
+    };
 
 
     window.EventKeyManager = __construct;
