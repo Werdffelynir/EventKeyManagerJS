@@ -163,16 +163,14 @@
                     if(typeof eventsObjects[i] === 'object' &&
                         eventsObjects[i].active && eventsObjects[i]['keyCode'] === event.keyCode ) {
                         if(typeof eventsObjects[i]['callback'] === 'function')
-                            eventsObjects[i]['callback'].call({}, event);
+                            eventsObjects[i]['callback'].call({}, event, eventsObjects[i]['id']);
                     }
                 }
             }
         }
     };
 
-
     /////////////////////// Dynamic prototype methods ///////////////////////
-
 
 
     /**
@@ -225,13 +223,6 @@
             __construct.listEvents[this.eventType]['listenCallback'] = callback;
     };
 
-
-    __construct.prototype.charToCode = function(letter){
-        return (letter||'').charCodeAt(0);
-    };
-    __construct.prototype.codeToChart = function(code){
-        return String.fromCharCode(code);
-    };
     __construct.prototype.getById = function (id) {
         return __construct.getEvent(this.eventType, id);
     };
@@ -243,6 +234,12 @@
         }
     };
 
+    __construct.charToCode = function(letter){
+        return (letter||'').charCodeAt(0);
+    };
+    __construct.codeToChart = function(code){
+        return String.fromCharCode(code);
+    };
 
     window.EventKeyManager = __construct;
 

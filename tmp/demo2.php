@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Demo of EventKeyManager v 0.2 </title>
-    
+
+    <script src="http://dom.loc/jslibs/util.js" type="application/javascript"></script>
     <script src="event.key.manager_0.2.js" type="application/javascript"></script>
-    <script src="http://dom.loc/ns.app/src/applibrary/util.js" type="application/javascript"></script>
     
 </head>
 <body>

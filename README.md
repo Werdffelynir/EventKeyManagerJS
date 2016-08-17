@@ -53,10 +53,12 @@ EventKeyManager.foreachEvent(callback)
 ```
 EventKeyManager.init();
 
-EventKeyManager.add('esc', 27, function(event){
+EventKeyManager.add('esc', 27, function(event, id){
+    // id === 'esc'
     console.log('Front \'esc\' >>> ', event);
 });
-EventKeyManager.add('left', 37, function(event){
+EventKeyManager.add('left', 37, function(event, id){
+    // id === 'left'
     console.log('Front \'left\' >>> ', event);
 });
 EventKeyManager.add('right', 39, function(event){

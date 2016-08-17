@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    
+    
+    
+<script>
+    
+    var n = 'Vasia';
+    var a = 456;
+    
+    let str =  `Name: ${n} Age: ${a}`;
+    
+    let magic = (arr, ...args) => {
+        console.log(arr.join('${}'));
+        console.log(args);
+    };
+    
+    magic`Name: ${n}Age: ${a}`;
+    
+    
+
+    </script>
+    
+</body>
+</html>
